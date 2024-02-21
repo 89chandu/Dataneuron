@@ -20,6 +20,11 @@ app.post('/api/add-edit', addOrUpdateEntry);
 app.get('/api/data', getAllData);
 app.get('/api/count', getCount);
 
+// Home route handler
+app.get('/', (req, res) => {
+  res.send('Your server is live now');
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
